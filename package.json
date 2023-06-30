@@ -1,6 +1,6 @@
 {
   "name": "jdl-sdk-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "京东物流服务端接口的 Node.js 版本封装，暴露出简单的方法函数供调用。(非官方)",
   "types": "dist/index.d.ts",
   "main": "dist/index.cjs.js",
