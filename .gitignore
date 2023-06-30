@@ -1,0 +1,12 @@
+.temp/
+.rn_temp/
+node_modules/
+
+.DS_Store
+
+.swc
+dist/
+
+
+.vscode/
+.idea/

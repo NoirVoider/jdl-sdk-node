@@ -1,0 +1,42 @@
+{
+  "name": "jdl-sdk-node",
+  "version": "1.0.0",
+  "description": "京东物流服务端接口的 Node.js 版本封装，暴露出简单的方法函数供调用。(非官方)",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "NODE_ENV=development rollup -c --watch",
+    "prod": "NODE_ENV=production rollup -c",
+    "tag": "npm version minor --no-git-tag-version && npm run prod && PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git commit -am \"$PACKAGE_VERSION release\" && git tag v$PACKAGE_VERSION"
+  },
+  "files": [
+    "dist/index.cjs.js",
+    "dist/index.esm.js",
+    "dist/index.d.ts",
+    "dist/enums/",
+    "dist/types/"
+  ],
+  "author": {
+    "name": "voider",
+    "email": "donnnv.dev@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/node": "^16.14.2",
+    "rollup": "^3.21.5",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "tslib": "^2.5.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "phin": "^3.7.0"
+  }
+}
